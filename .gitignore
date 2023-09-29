@@ -1,0 +1,64 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+.properties
+
+
+
+# Logs e arquivos temporários
+log/
+out/
+
+
+
+# Arquivos de compilação Java
+*.class
+
+# Diretório de configuração do Spring Boot
+spring-boot-configuration-metadata.json
+
+# Cache do Spring
+spring.factories
+
+# Arquivos de configuração do Lombok
+lombok.config
+
+# Arquivos de configuração de log do Spring Boot
+logback-spring.xml
+logback.xml
+
+# Arquivo de configuração do Spring
+src/main/resources/application.properties
+src/main/resources/application-test.properties
+
