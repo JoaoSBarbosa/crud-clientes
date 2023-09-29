@@ -46,7 +46,7 @@ Para executar o projeto localmente, siga os passos abaixo:
 
 1. #### POST
 
-   ![Post client](./src/main/resource/public/img/insert.png)
+   ![Post client](/src/main/resources/public/img/insert.png)
 
 2. #### GET BY ID
 
