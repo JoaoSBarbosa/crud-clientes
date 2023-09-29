@@ -31,7 +31,7 @@ Para executar o projeto localmente, siga os passos abaixo:
 1. Clone o repositório em sua máquina local.
 
    ```
-   git clone https://github.com/seu-usuario/crud-clientes.git
+   git clone https://github.com/JoaoSBarbosa/crud-clientes.git
    ```
 
 2. Importe o projeto em sua IDE preferida.
