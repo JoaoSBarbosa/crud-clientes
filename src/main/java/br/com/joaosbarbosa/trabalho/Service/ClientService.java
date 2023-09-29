@@ -14,6 +14,7 @@ public class ClientService {
     public ClientDTO insert(ClientDTO dto){
         Client entity = new Client();
         copyDtoToEntity(entity, dto);
+
         entity = clientRepository.save(entity);
         return new ClientDTO(entity);
     }
@@ -24,5 +25,6 @@ public class ClientService {
         entity.setCpf(dto.getCpf());
         entity.setBirthDate(dto.getBirthDate());
         entity.setInCome(dto.getInCome());
+
     }
 }

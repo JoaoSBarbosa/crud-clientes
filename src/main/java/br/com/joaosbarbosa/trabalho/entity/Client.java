@@ -2,11 +2,13 @@ package br.com.joaosbarbosa.trabalho.entity;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
 @Table(name = "tb_cliente")
-public class Client {
+public class Client implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +20,7 @@ public class Client {
     private String cpf;
     @Column(name = "cli_renda")
     private Double inCome;
-    @Column(name = "cli_aniversario")
+    @Column(name = "cli_aniversario", columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant birthDate;
     @Column(name = "cli_qtd_filhos")
     private Integer children;

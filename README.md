@@ -42,7 +42,17 @@ Para executar o projeto localmente, siga os passos abaixo:
 
 5. Acesse os endpoints utilizando um cliente de API (como Postman ou Insomnia) ou utilize uma interface de usuário, se houver.
 
+## Testes
+
+1. #### POST
+
+   ![Post client](./src/main/resource/public/img/insert.png)
+
+2. #### GET BY ID
+
 ## Tecnologias Utilizadas
+
+
 
 - Java
 - Spring Boot

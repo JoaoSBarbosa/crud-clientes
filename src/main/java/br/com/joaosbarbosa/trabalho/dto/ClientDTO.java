@@ -1,5 +1,6 @@
 package br.com.joaosbarbosa.trabalho.dto;
 
+import br.com.joaosbarbosa.trabalho.entity.Client;
 import jakarta.persistence.Column;
 
 import java.time.Instant;
@@ -20,6 +21,15 @@ public class ClientDTO {
         this.inCome = inCome;
         this.birthDate = birthDate;
         this.children = children;
+    }
+
+    public ClientDTO(Client entity) {
+        id = entity.getId();
+        name = entity.getName();
+        cpf = entity.getCpf();
+        inCome = entity.getInCome();
+        birthDate = entity.getBirthDate();
+        children = entity.getChildren();
     }
 
     public Long getId() {
