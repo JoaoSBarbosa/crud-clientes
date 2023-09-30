@@ -2,7 +2,7 @@
 
 
 
-# CRUD de Clientes ☕📐
+# CRUD de Clientes ☕
 
 Este projeto implementa um CRUD (Create, Read, Update, Delete) para gerenciar clientes. Ele inclui diversas camadas, como service, entity, dto, controller e repository para manter uma estrutura organizada. Abaixo são listadas as funcionalidades principais do projeto:
 
@@ -48,7 +48,21 @@ Para executar o projeto localmente, siga os passos abaixo:
 
    ![Post client](/src/main/resources/public/img/insert.png)
 
-2. #### GET BY ID
+2. #### GET - BY ID
+
+   ![Post client](/src/main/resources/public/img/getById.png)
+
+3. GET- Page
+
+   ![Post client](/src/main/resources/public/img/pages.png)
+
+4. PUT - Update
+
+   ![Post client](/src/main/resources/public/img/put.png)
+
+5. DELETE
+
+   ![Post client](/src/main/resources/public/img/delete.png)
 
 ## Tecnologias Utilizadas
 

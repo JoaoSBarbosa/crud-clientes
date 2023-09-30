@@ -26,8 +26,6 @@ public class ClientService {
         return new ClientDTO(entity);
     }
 
-
-
     @Transactional(readOnly = true)
     public Page<ClientDTO> findAllPages(PageRequest pageRequest) {
         Page<Client> clientPage = clientRepository.findAll(pageRequest);
@@ -57,15 +55,7 @@ public class ClientService {
         }
     }
 
-    private void copyDtoToEntity(Client entity, ClientDTO dto){
-        entity.setName(dto.getName());
-        entity.setChildren(dto.getChildren());
-        entity.setCpf(dto.getCpf());
-        entity.setBirthDate(dto.getBirthDate());
-        entity.setInCome(dto.getInCome());
-
-    }
-
+@Transactional
     public void delete(Long id) throws DataFormatException {
         try{
             Optional<Client> optionalClient = clientRepository.findById(id);
@@ -78,5 +68,13 @@ public class ClientService {
         }catch (Exception e){
         throw new DataFormatException("Violação de integridade");
         }
+    }
+    private void copyDtoToEntity(Client entity, ClientDTO dto){
+        entity.setName(dto.getName());
+        entity.setChildren(dto.getChildren());
+        entity.setCpf(dto.getCpf());
+        entity.setBirthDate(dto.getBirthDate());
+        entity.setInCome(dto.getInCome());
+
     }
 }
