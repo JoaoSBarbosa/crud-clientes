@@ -14,6 +14,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.Optional;
+import java.util.zip.DataFormatException;
 
 @RestController
 @RequestMapping("/clients")
@@ -53,5 +54,12 @@ public class ClientResource {
         dto = clientService.updateClient(dto, id);
 
         return ResponseEntity.ok().body(dto);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) throws DataFormatException {
+        clientService.delete(id);
+
+        return ResponseEntity.noContent().build();
     }
 }

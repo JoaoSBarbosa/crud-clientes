@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
+import java.util.zip.DataFormatException;
 
 @Service
 public class ClientService {
@@ -63,5 +64,19 @@ public class ClientService {
         entity.setBirthDate(dto.getBirthDate());
         entity.setInCome(dto.getInCome());
 
+    }
+
+    public void delete(Long id) throws DataFormatException {
+        try{
+            Optional<Client> optionalClient = clientRepository.findById(id);
+
+            if(optionalClient.isPresent()){
+                clientRepository.deleteById(id);
+            }else {
+                throw new EntityNotFoundException("ID NÃO LOCALIZADO" +id);
+            }
+        }catch (Exception e){
+        throw new DataFormatException("Violação de integridade");
+        }
     }
 }
